@@ -1,28 +1,10 @@
 [workspace]
+members = ["crates/aod-ae-utils"]
 resolver = "2"
-members = ["plugins/*"]
 
 [workspace.package]
-edition = "2024"
+edition = "2021"
 license = "MPL-2.0"
-authors = ["Aodaruma"]
 
 [profile.dev]
 opt-level = 3
-
-[workspace.dependencies]
-after-effects = { git = "https://github.com/virtualritz/after-effects.git", rev = "0e0b197850f28c1bb24e8c82fce2e3d4c120d1e9" }
-pipl = { git = "https://github.com/virtualritz/after-effects.git", rev = "0e0b197850f28c1bb24e8c82fce2e3d4c120d1e9" }
-rand = "0.9.2"
-nalgebra = "0.34.1"
-rustfft = "6.0"
-num-complex = "0.4"
-chrono = "0.4.42"
-imageproc = "0.26.0"
-wgpu = { version = "28", features = ["spirv"] }
-bytemuck = { version = "1.16.0", features = ["derive"] }
-pollster = { version = "0.4" }
-futures-intrusive = { version = "0.5" }
-
-
-[workspace.lints]

@@ -1,0 +1,26 @@
+[package]
+name = "aod-ae-utils"
+version = "0.1.0"
+edition = "2021"
+description = "Comprehensive utility library for Adobe After Effects plugin development in Rust"
+license = "MPL-2.0"
+repository = "https://github.com/Aodaruma/aod-AE-plugin"
+keywords = ["after-effects", "adobe", "plugin", "video", "effects"]
+categories = ["multimedia::video"]
+
+[features]
+default = ["cpu"]
+full = ["cpu", "gpu"]
+cpu = ["rayon"]
+gpu = ["wgpu", "bytemuck", "pollster", "futures-intrusive"]
+
+[dependencies]
+after-effects = "0.4"
+log = "0.4"
+rayon = { version = "1", optional = true }
+wgpu = { version = "28", optional = true, features = ["spirv"] }
+bytemuck = { version = "1", optional = true, features = ["derive"] }
+pollster = { version = "0.4", optional = true }
+futures-intrusive = { version = "0.5", optional = true }
+
+[dev-dependencies]
