@@ -41,3 +41,10 @@ Source code alone is NOT sufficient for correct changes.
 
 - Format: `TAG: Summary` (English, single line)
 - TAG: `ADD` / `REFACTOR` / `CHORE` / `FIX` / `DOCS`
+
+
+## Constitution / operating profile
+
+- 最上位 contract: [`constitution/CONSTITUTION.md`](constitution/CONSTITUTION.md)
+- current Operating Model: [`organization/profiles/release-driven-solo.md`](organization/profiles/release-driven-solo.md)
+- `docs/INDEX.md` と public API / AE SDK 固有 documentation は project-specific authority として維持する。
